@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <!-- test -->
+        <title>Rust — Explore, Build and Survive</title>
+        <meta name="og:title" content="Rust">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="CD412B">
+    <meta name="theme-color" content="CD412B">
+
+
+    <link rel="stylesheet" href="./styles.min.css"> 
+    
+    <link rel="alternate" type="application/rss+xml" title="News Feed" href="/rss/news" />
+    <meta name="facebook-domain-verification" content="44ki6406nwzm67jdevafmbg68dj5y4" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@fcpnchstds" />
+
+        <meta property="og:description" content="The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife and other inhabitants, the environment, other survivors. Do whatever it takes to last another night." />
+        <meta name="twitter:description" content="The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife and other inhabitants, the environment, other survivors. Do whatever it takes to last another night. " />
+        <meta property="og:image" content="https://files.facepunch.com/lewis/1b2411b1/og-image.jpg" />
+        <meta name="twitter:image" content="https://files.facepunch.com/lewis/1b2411b1/og-image.jpg" />
+
+<script type="text/javascript">!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{
+src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js", // The SDK URL Source
+crossOrigin: "anonymous", 
+cfg: { // Application Insights Configuration
+    connectionString: 'InstrumentationKey=e690ef2e-57d3-49b5-a094-94c7c2d56536;IngestionEndpoint=https://eastus-8.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus.livediagnostics.monitor.azure.com/;ApplicationId=2b4b3a02-6ed0-44bc-b49b-8a9fa8a084c9'
+}});</script></head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="/" class="header-brand">
+            <img src="https://files.facepunch.com/lewis/1b2911b1/rust-marque.svg" alt="Rust Marque Logo" />
+        </a>
+
+        <a class="button is-primary toggle-navigation">
+            <span class="icon">
+                <i>menu</i>
+            </span>
+        </a>
+
+        <div class="header-navigation">
+            <a href="/news/">news</a>
+            <a href="/companion/">companion</a>
+            <a href="https://facepunch.com/rustmobile" target="_blank">mobile</a>
+            <a target="_blank" href="https://facepunch.com/merch">Merch</a>
+            <a href="/store/">Store</a>
+            <a href="/redeem/">Redeem</a>
+            <a target="_blank" href="https://facepunch.com/careers">Careers</a>
+            <a target="_blank" href="https://store.steampowered.com/app/252490/Rust/utm_source=fpwebsite" class="buy-button">Buy Rust</a>
+        </div>
+
+    </div>
+</header>
+
+
+<div class="page-hero">
+    <div class="hero-video transition-header">
+        <video autoplay muted loop playsinline>
+            <source src="https://files.facepunch.com/paddy/20210324/rust_site2021_hero_v002.mp4" type="video/mp4" />
+        </video>
+    </div>
+    <div class="hero-body">
+        <div class="container">
+            <div class="body-info">
+                <h1 class="title">Explore Build Survive</h1>
+                <p>
+                    The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife and other
+                    inhabitants, the environment, other survivors. Do whatever it takes to last another night.
+                </p>
+                <div class="buttons">
+                    <a href="https://store.steampowered.com/app/252490/Rust/utm_source=fpwebsite" target="_blank" class="button is-primary is-large">
+                        <span class="icon">
+                            <i>open_in_new</i>
+                        </span>
+                        <span>Buy Rust</span>
+                    </a>
+                    <a href="#" class="button is-outline is-large" onclick="openTrailerOverlay(); return false;">
+                        <span>Watch Trailer</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="trailerOverlay" class="trailer-overlay" style="display:none;" onclick="closeTrailerOverlay()">
+
+        <div class="trailer-modal">
+            <button class="close-btn button is-primary" onclick="closeTrailerOverlay()">
+                <span class="icon">
+                    <i>close</i>
+                </span>
+            </button>
+            <div class="video-container">
+                <iframe width="800" height="450"
+                        src=""
+                        title="Rust Trailer"
+                        frameborder="0"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="section featured-dlc is-large bg-medium">
+    <div class="background-image">
+
+            <video autoplay loop muted playsinline>
+                <source src="https://files.facepunch.com/lewis/1b2911b110/krieg_tile.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+    </div>
+    <div class="container">
+        <div class="featured-dlc-body">
+            <div class="tags">
+                <span class="tag primary is-medium">DLC</span>
+            </div>
+                <img src="https://files.facepunch.com/lewis/1b1511b114/warhammer-pack_branding.png" alt="Warhammer Pack" class="brand-logo" />
+
+            <p class="subtitle">Gear up and march across the island clad in their signature gas-masked Hazmat suit. Shoulder your Death Korps of Krieg Backpack, designed with the rugged practicality of Astra Militarum kit. Unleash the roar of the Death Korps Chainsword and the thunder of the Krieg Shotgun, while the Death Korps Storage Containers transform your base into a fortified stronghold.&#xD;&#xA;</p>
+
+                <a href="https://www.warhammer.com" class="external-url" target="_blank">
+                    <span class="icon">
+                        <i>open_in_new</i>
+                    </span>
+                    <span>https://www.warhammer.com</span>
+                </a>
+
+            <a href="/store/dlc/warhammer" class="button is-primary is-medium">Learn More</a>
+
+
+
+        </div>
+    </div>
+</div>
+
+    <div class="section featured-blog bg-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="icon">
+                    <i>article</i>
+                </span>
+                <h1>Latest News</h1>
+            </div>
+
+            <div class="featured-blog">
+                <a href="/news/power-trip">
+                    <div class="featured-blog-image">
+
+                            <video class="featured-blog-video" autoplay loop muted playsinline>
+                                <source src="https://files.facepunch.com/lewis/2026/August/power-trip_blog.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                    </div>
+                </a>
+                <div class="featured-blog-body">
+                    <a href="/news/power-trip">
+                        <h1>Power Trip</h1>
+                    </a>
+                    <div class="date-and-tags">
+                        <div class="tag primary">11 Days Ago</div>
+                        <a href="/news/?category=devblog" class="tag devblog">DEVBLOG</a>
+                    </div>
+                    <p>
+                        This month&#x27;s update brings you Player Maintained Monuments in the form of a new Satellite Crash, Dome Pumping, restorable Power Plant, plus more. As well as plenty of balances, bug fixes, optimisations, upgrades, and more improvements!
+                    </p>
+                    <a href="/news/power-trip" class="button is-primary is-medium">
+                        Read more
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="section quote is-medium bg-medium">
+    <div class="dark-bar-pattern"></div>
+    <div class="container">
+        <div class="quote-text">
+            <h1>“Rust is one of the cruelest games on Steam, and that's what makes it so compelling.”</h1>
+            <a href="https://www.pcgamer.com/uk/rust-review/" target="_blank" class="company">PC Gamer</a>
+        </div>
+    </div>
+    <div class="dark-bar-pattern bottom flip"></div>
+</div>
+<div class="section twitch-drops split-drops">
+    <div class="dark-bar-pattern flip"></div>
+
+    <div class="drops-container">
+        <!-- Twitch Drops - Left Side -->
+        <a href="https://twitch.facepunch.com" target="_blank" class="drops-column twitch-column">
+            <div class="drops-body">
+                <img class="kick-logo" src="https://files.facepunch.com/lewis/1b2811b1/twitch_wordmark_flat_white.svg" alt="Twitch Drops" />
+                <span class="subtitle">
+                    Twitch Drops from your favourite streamers.
+                </span>
+
+                <div class="button is-primary is-large">
+                    Get Twitch Drops
+                </div>
+            </div>
+        </a>
+
+        <!-- Kick Drops - Right Side -->
+        <a href="https://kick.facepunch.com" target="_blank" class="drops-column kick-column">
+            <div class="drops-body">
+                <img class="kick-logo" src="https://files.facepunch.com/lewis/1b2811b1/kick_logo.svg" alt="Kick Drops" />
+                <span class="subtitle">
+                    Kick Drops from your favourite streamers.
+                </span>
+
+                <div class="button is-primary is-large">
+                    Get Kick Drops
+                </div>
+            </div>
+        </a>
+    </div>
+    <span class="warning-message">Be vigiliant of scams - only ever use official Facepunch websites above</span>
+    <div class="dark-bar-pattern bottom">
+
+    </div>
+</div>
+<div class="section companion">
+    <div class="container">
+        <div class="companion-container">
+            <div class="text-container">
+                <h1>
+                    Rust+ <span>Companion</span>
+                </h1>
+                <p>
+                    The official Rust companion app – stay connected to the game so
+                    you never miss an important moment again. Coordinate with your
+                    team, receive alerts when you’re being raided, remotely set off
+                    traps, and more!
+                </p>
+                <a href="/companion" class="button is-primary is-medium">Learn More</a>
+            </div>
+            <img src="https://files.facepunch.com/lewis/1b2811b1/device_home.png" alt="Rust +" class="companion-image" />
+        </div>
+       
+    </div>
+</div>
+
+<div class="image-section small">
+    <div class="image"
+         style="background-image: url(https://files.facepunch.com/lewis/1b2411b1/image-section.jpg)">
+    </div>
+</div>
+
+
+
+<section class="section is-small newsletter bg-light">
+    <div class="container">
+
+        <div class="columns is-centered">
+            <div class="column is-7">
+
+                    <div class="section-header-container no-space">
+                        <h2 class="title is-size-2">Newsletter</h2>
+                        <p class="subtitle is-size-5">Receive monthly updates straight to your inbox</p>
+                    </div>
+
+                    <div id="mc_embed_shell">
+                        <div id="mc_embed_signup">
+                            <form action="https://playrust.us3.list-manage.com/subscribe/post?u=a77cf02714733d8fed3c801a8&amp;id=d9ec395bae&amp;f_id=003010e2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
+                                <div id="mc_embed_signup_scroll">
+           
+                                    
+                                    <div class="mc-field-group field is-grouped">
+                                        <p class="control is-expanded">
+                                            <input type="email" name="EMAIL" class="required email input is-medium" placeholder="you@emailaddress.com" id="mce-EMAIL" required="" value="">
+                                        </p>
+                                        <p class="control">
+                                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button is-primary is-medium" value="Subscribe">
+                                        </p>
+                                    </div>
+                                    <span id="mce-EMAIL-HELPERTEXT" class="helper_text help "></span>
+
+                                    <div id="mce-responses" class="clear">
+                                        <div class="response" id="mce-error-response" style="display: none;"></div>
+                                        <div class="response" id="mce-success-response" style="display: none;"></div>
+                                    </div>
+
+                                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                        <input type="text" name="b_a77cf02714733d8fed3c801a8_d9ec395bae" tabindex="-1" value="">
+                                    </div>
+       
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        
+    </div>
+</section>
+
+<footer class="section bg-dark">
+    <div class="dark-bar-pattern"></div>
+    <div class="container">
+        <div class="footer-branding">
+            <a href="/" class="brand-logo">
+                <img src="https://files.facepunch.com/lewis/1b1011b1/rust-brand.svg"
+                     alt="Rust Branding"/>
+            </a>
+            <span class="cross">
+                <img src="https://files.facepunch.com/lewis/1b1011b1/cross.svg"
+                     alt="Cross"/>
+            </span>
+            <a href="https://facepunch.com" target="_blank" class="brand-logo">
+                <img src="https://files.facepunch.com/lewis/1b1011b1/facepunch-brand.svg"
+                     alt="Facepunch Branding"/>
+            </a>
+        </div>
+        <div class="footer-navigation">
+            <a class="footer-nav-link" href="/news">
+                News
+            </a>
+            <a target="_blank" href="https://store.steampowered.com/app/252490/Rust/utm_source=fpwebsite" class="footer-nav-link">
+                Buy Rust
+            </a>
+
+            <a class="footer-nav-link" href="/companion">
+                Companion
+            </a>
+
+            <a href="https://facepunch.com/rustmobile" class="footer-nav-link" target="_blank">
+                Mobile
+            </a>
+            <a href="https://twitch.facepunch.com" target="_blank" class="footer-nav-link">
+                Twitch Drops
+            </a>
+            <a href="https://kick.facepunch.com" target="_blank" class="footer-nav-link">
+                Kick Drops
+            </a>
+            <a href="https://facepunch.com/merch" target="_blank" class="footer-nav-link">
+                Merch
+            </a>
+            <a href="https://facepunch.com/creators" target="_blank" class="footer-nav-link">
+                Creators Program
+            </a>
+            <a href="https://rust.double11.com/" target="_blank" class="footer-nav-link">
+                Console
+            </a>
+            <a class="footer-nav-link" href="https://commits.facepunch.com/">
+                Commits
+            </a>
+            <a class="footer-nav-link" href="/changes">
+                Changelog
+            </a>
+            <a class="footer-nav-link" href="/support">
+                Support
+            </a>
+            <a href="https://facepunch.com/careers" target="_blank" class="footer-nav-link">
+                Careers
+            </a>
+            <a target="_blank" href="https://facepunch.com/legal" class="footer-nav-link">
+                Legal
+            </a>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="copy-flex">
+                <span class="footer-copy-text">
+                    &copy; 2026 Facepunch Studios. All rights reserved.
+                </span>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/fcpnch/" class="social-button" target="_blank">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="#575350" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.8001 15.9996C20.8001 17.2727 20.2944 18.4936 19.3942 19.3938C18.4941 20.2939 17.2732 20.7996 16.0001 20.7996C14.7271 20.7996 13.5062 20.2939 12.606 19.3938C11.7058 18.4936 11.2001 17.2727 11.2001 15.9996C11.2001 15.726 11.2289 15.4588 11.2785 15.1996H9.60014V21.5948C9.60014 22.0396 9.96014 22.3996 10.4049 22.3996H21.5969C21.8101 22.3992 22.0144 22.3142 22.165 22.1634C22.3156 22.0125 22.4001 21.808 22.4001 21.5948V15.1996H20.7217C20.7713 15.4588 20.8001 15.726 20.8001 15.9996ZM16.0001 19.1996C16.4205 19.1995 16.8367 19.1166 17.225 18.9557C17.6133 18.7947 17.9661 18.5589 18.2632 18.2616C18.5604 17.9643 18.796 17.6114 18.9568 17.223C19.1176 16.8346 19.2002 16.4184 19.2001 15.998C19.2 15.5777 19.1171 15.1615 18.9562 14.7732C18.7952 14.3849 18.5594 14.0321 18.2621 13.735C17.9648 13.4378 17.6119 13.2021 17.2235 13.0414C16.8351 12.8806 16.4189 12.7979 15.9985 12.798C15.1496 12.7983 14.3356 13.1357 13.7355 13.7361C13.1353 14.3365 12.7983 15.1507 12.7985 15.9996C12.7987 16.8486 13.1362 17.6626 13.7366 18.2627C14.337 18.8628 15.1512 19.1999 16.0001 19.1996ZM19.8401 12.6396H21.7585C21.886 12.6396 22.0082 12.5891 22.0985 12.4992C22.1888 12.4092 22.2397 12.2871 22.2401 12.1596V10.2412C22.2401 10.1135 22.1894 9.99102 22.0991 9.90071C22.0088 9.81039 21.8863 9.75965 21.7585 9.75965H19.8401C19.7124 9.75965 19.5899 9.81039 19.4996 9.90071C19.4093 9.99102 19.3585 10.1135 19.3585 10.2412V12.1596C19.3601 12.4236 19.5761 12.6396 19.8401 12.6396ZM16.0001 0.639648C11.9264 0.639648 8.01953 2.25793 5.13898 5.13849C2.25842 8.01905 0.640137 11.9259 0.640137 15.9996C0.640137 20.0734 2.25842 23.9802 5.13898 26.8608C8.01953 29.7414 11.9264 31.3596 16.0001 31.3596C18.0172 31.3596 20.0146 30.9623 21.8782 30.1904C23.7417 29.4185 25.435 28.2871 26.8613 26.8608C28.2876 25.4345 29.419 23.7412 30.1909 21.8777C30.9628 20.0141 31.3601 18.0168 31.3601 15.9996C31.3601 13.9825 30.9628 11.9852 30.1909 10.1216C29.419 8.25807 28.2876 6.5648 26.8613 5.13849C25.435 3.71218 23.7417 2.58077 21.8782 1.80886C20.0146 1.03695 18.0172 0.639648 16.0001 0.639648ZM24.0001 22.222C24.0001 23.1996 23.2001 23.9996 22.2225 23.9996H9.77774C8.80014 23.9996 8.00014 23.1996 8.00014 22.222V9.77725C8.00014 8.79965 8.80014 7.99965 9.77774 7.99965H22.2225C23.2001 7.99965 24.0001 8.79965 24.0001 9.77725V22.222Z"/>
+                        </svg>
+
+                    </a>
+                    <a href="https://discord.gg/rust" class="social-button" target="_blank">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="#575350" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.1042 13.4238C12.1922 13.4238 11.4722 14.2238 11.4722 15.1998C11.4722 16.1758 12.2082 16.9758 13.1042 16.9758C14.0162 16.9758 14.7362 16.1758 14.7362 15.1998C14.7522 14.2238 14.0162 13.4238 13.1042 13.4238ZM18.9442 13.4238C18.0322 13.4238 17.3122 14.2238 17.3122 15.1998C17.3122 16.1758 18.0482 16.9758 18.9442 16.9758C19.8562 16.9758 20.5762 16.1758 20.5762 15.1998C20.5762 14.2238 19.8562 13.4238 18.9442 13.4238Z"/>
+                            <path d="M26.72 0H5.28C3.472 0 2 1.472 2 3.296V24.928C2 26.752 3.472 28.224 5.28 28.224H23.424L22.576 25.264L24.624 27.168L26.56 28.96L30 32V3.296C30 1.472 28.528 0 26.72 0ZM20.544 20.896C20.544 20.896 19.968 20.208 19.488 19.6C21.584 19.008 22.384 17.696 22.384 17.696C21.728 18.128 21.104 18.432 20.544 18.64C19.744 18.976 18.976 19.2 18.224 19.328C16.8537 19.5803 15.4483 19.5749 14.08 19.312C13.2767 19.1548 12.4894 18.9245 11.728 18.624C11.3267 18.4697 10.9364 18.2879 10.56 18.08C10.512 18.048 10.464 18.032 10.416 18C10.384 17.984 10.368 17.968 10.352 17.952C10.064 17.792 9.904 17.68 9.904 17.68C9.904 17.68 10.672 18.96 12.704 19.568C12.224 20.176 11.632 20.896 11.632 20.896C8.096 20.784 6.752 18.464 6.752 18.464C6.752 13.312 9.056 9.136 9.056 9.136C11.36 7.408 13.552 7.456 13.552 7.456L13.712 7.648C10.832 8.48 9.504 9.744 9.504 9.744C9.504 9.744 9.856 9.552 10.448 9.28C12.16 8.528 13.52 8.32 14.08 8.272C14.176 8.256 14.256 8.24 14.352 8.24C17.1266 7.86446 19.9483 8.39179 22.4 9.744C22.4 9.744 21.136 8.544 18.416 7.712L18.64 7.456C18.64 7.456 20.832 7.408 23.136 9.136C23.136 9.136 25.44 13.312 25.44 18.464C25.44 18.464 24.08 20.784 20.544 20.896Z"/>
+                        </svg>
+
+                    </a>
+                    <a href="https://www.facebook.com/facepunchrust/" class="social-button" target="_blank">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="#575350" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.0001 0.639648C7.51694 0.639648 0.640137 7.51645 0.640137 15.9996C0.640137 24.4828 7.51694 31.3596 16.0001 31.3596C24.4833 31.3596 31.3601 24.4828 31.3601 15.9996C31.3601 7.51645 24.4833 0.639648 16.0001 0.639648ZM19.6385 11.254H17.3297C17.0561 11.254 16.7521 11.614 16.7521 12.0924V13.7596H19.6401L19.2033 16.1372H16.7521V23.2748H14.0273V16.1372H11.5553V13.7596H14.0273V12.3612C14.0273 10.3548 15.4193 8.72445 17.3297 8.72445H19.6385V11.254Z"/>
+                        </svg>
+
+                    </a>
+                    <a href="https://www.youtube.com/c/fcpnch" class="social-button" target="_blank">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="#575350" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.5644 15.7324L14.9708 14.0556C14.6572 13.91 14.3996 14.0732 14.3996 14.4204V17.5788C14.3996 17.926 14.6572 18.0892 14.9708 17.9436L18.5628 16.2668C18.878 16.1196 18.878 15.8796 18.5644 15.7324ZM15.9996 0.639648C7.51645 0.639648 0.639648 7.51645 0.639648 15.9996C0.639648 24.4828 7.51645 31.3596 15.9996 31.3596C24.4828 31.3596 31.3596 24.4828 31.3596 15.9996C31.3596 7.51645 24.4828 0.639648 15.9996 0.639648ZM15.9996 22.2396C8.13725 22.2396 7.99965 21.5308 7.99965 15.9996C7.99965 10.4684 8.13725 9.75965 15.9996 9.75965C23.862 9.75965 23.9996 10.4684 23.9996 15.9996C23.9996 21.5308 23.862 22.2396 15.9996 22.2396Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/playrust" class="social-button" target="_blank">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="#575350" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.0001 0.639648C7.51694 0.639648 0.640137 7.51645 0.640137 15.9996C0.640137 24.4828 7.51694 31.3596 16.0001 31.3596C24.4833 31.3596 31.3601 24.4828 31.3601 15.9996C31.3601 7.51645 24.4833 0.639648 16.0001 0.639648ZM22.2481 13.222C22.2545 13.3532 22.2561 13.4844 22.2561 13.6124C22.2561 17.6124 19.2145 22.222 13.6497 22.222C12.0054 22.2248 10.3953 21.7525 9.01294 20.862C9.24814 20.8908 9.48974 20.902 9.73454 20.902C11.1521 20.902 12.4561 20.4204 13.4913 19.6076C12.8605 19.5953 12.2492 19.3864 11.7427 19.0101C11.2362 18.6338 10.8597 18.1089 10.6657 17.5084C11.1188 17.5946 11.5855 17.5765 12.0305 17.4556C11.3458 17.3172 10.7301 16.9462 10.2877 16.4055C9.84528 15.8649 9.60351 15.1878 9.60334 14.4892V14.4524C10.0113 14.678 10.4785 14.8156 10.9745 14.8316C10.3326 14.4043 9.87819 13.7479 9.70421 12.9967C9.53022 12.2454 9.64982 11.4561 10.0385 10.79C10.7985 11.7244 11.7462 12.4888 12.8202 13.0337C13.8943 13.5786 15.0709 13.8919 16.2737 13.9532C16.1208 13.3041 16.1866 12.6227 16.461 12.0149C16.7353 11.407 17.2027 10.9068 17.7906 10.5921C18.3786 10.2773 19.054 10.1656 19.712 10.2743C20.3699 10.383 20.9735 10.7061 21.4289 11.1932C22.106 11.0593 22.7553 10.8109 23.3489 10.4588C23.1233 11.1599 22.6508 11.7551 22.0193 12.134C22.6191 12.0618 23.2047 11.9006 23.7569 11.6556C23.3513 12.2635 22.8404 12.7939 22.2481 13.222Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@fcpnchrust" class="social-button" target="_blank">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="#575350" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_660_65)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0ZM19.6122 6.66667C19.612 7.74252 19.9964 8.78183 20.6939 9.59111C22.0816 11.2193 24 11.1259 24 11.1259V14.3304C22.4259 14.3331 20.8908 13.8324 19.6122 12.8993V19.4222C19.6122 22.6889 17.0102 25.3333 13.8061 25.3333C10.8163 25.3333 8 22.8756 8 19.4222C8 15.8756 11.0816 13.0963 14.602 13.5733V16.8504C12.8571 16.3007 11.1633 17.6385 11.1633 19.4222C11.1633 20.9156 12.3673 22.1185 13.8163 22.1185C14.5015 22.1184 15.1599 21.8481 15.6528 21.3645C16.1458 20.8809 16.4349 20.2218 16.4592 19.5259V6.66667H19.6122Z"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_660_65">
+                                    <rect width="32" height="32" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>window.RequestToken = "CfDJ8JnZb85ZnlxKsoxFk09_p63wySF-tcQJk25ZInA9PyWRjmFMoa9sCjkv6AW0OwxyxFkIxA0H5uefm-NMoJYLa1tNFPzELb3MzlqVuimgXjNAKM7y1OwwKTaZ0qAWkgdo9T5G9i-f8OvTeiuiBfp66eM";</script>
+<script src="/script.js?v=4YeaN-zJZonXUyXgGHBEroubnJxkgGrKLyntLu0bCMY"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QVFB2GZHYP"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QVFB2GZHYP');
+    </script>
+
+
+    <script>
+
+        function openTrailerOverlay() {
+            const overlay = document.getElementById('trailerOverlay');
+            const iframe = overlay.querySelector('iframe');
+            overlay.style.display = 'flex';
+            if (iframe) {
+                iframe.src = "https://www.youtube.com/embed/LGcECozNXEw?autoplay=1";
+            }
+        }
+
+        function closeTrailerOverlay() {
+            const overlay = document.getElementById('trailerOverlay');
+            overlay.style.display = 'none';
+
+            const iframe = overlay.querySelector('iframe');
+            if (iframe) {
+                iframe.src = 'about:blank';
+            }
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                const overlay = document.getElementById('trailerOverlay');
+                if (overlay && overlay.style.display !== 'none') {
+                    closeTrailerOverlay();
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
