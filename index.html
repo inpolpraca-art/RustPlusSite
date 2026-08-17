@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rust+</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">R</div>
+            <span>RUST<span class="orange">+</span></span>
+        </div>
+
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#features">Возможности</a>
+            <a href="#about">О сайте</a>
+        </nav>
+
+        <button class="play-button" onclick="scrollToFeatures()">
+            PLAY RUST
+        </button>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="small-title">
+                    <span></span>
+                    RUST COMPANION
+                </div>
+
+                <h1>
+                    RUST<span>+</span>
+                </h1>
+
+                <p>
+                    Следи за своей базой, серверами и событиями Rust
+                    в одном удобном месте.
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="main-button" onclick="scrollToFeatures()">
+                        НАЧАТЬ
+                    </button>
+
+                    <button class="secondary-button" onclick="showMessage()">
+                        УЗНАТЬ БОЛЬШЕ
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="hero-card">
+
+                <div class="card-header">
+                    <span>SERVER STATUS</span>
+                    <div class="online">
+                        <span class="dot"></span>
+                        ONLINE
+                    </div>
+                </div>
+
+                <div class="server-name">
+                    RUST OFFICIAL
+                </div>
+
+                <div class="server-info">
+
+                    <div>
+                        <span>PLAYERS</span>
+                        <strong>148 / 200</strong>
+                    </div>
+
+                    <div>
+                        <span>WIPE</span>
+                        <strong>RECENT</strong>
+                    </div>
+
+                    <div>
+                        <span>STATUS</span>
+                        <strong class="green">ONLINE</strong>
+                    </div>
+
+                </div>
+
+                <div class="progress">
+                    <div></div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="features" id="features">
+
+            <div class="section-title">
+                <span>01</span>
+                <h2>ВОЗМОЖНОСТИ</h2>
+            </div>
+
+            <div class="cards">
+
+                <div class="feature-card">
+
+                    <div class="feature-number">01</div>
+
+                    <div class="feature-icon">⌁</div>
+
+                    <h3>МОНИТОРИНГ</h3>
+
+                    <p>
+                        Следи за состоянием сервера
+                        и количеством игроков.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-number">02</div>
+
+                    <div class="feature-icon">◆</div>
+
+                    <h3>УВЕДОМЛЕНИЯ</h3>
+
+                    <p>
+                        Получай важную информацию
+                        о событиях на сервере.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-number">03</div>
+
+                    <div class="feature-icon">⚙</div>
+
+                    <h3>УПРАВЛЕНИЕ</h3>
+
+                    <p>
+                        Удобный интерфейс для контроля
+                        игрового процесса.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="about" id="about">
+
+            <div class="about-content">
+
+                <div class="section-title">
+                    <span>02</span>
+                    <h2>RUST COMPANION</h2>
+                </div>
+
+                <p>
+                    Этот сайт создан в стиле Rust и предназначен
+                    для удобного отображения игровой информации.
+                </p>
+
+                <p>
+                    Интерфейс адаптирован для компьютеров,
+                    телефонов и планшетов.
+                </p>
+
+            </div>
+
+            <div class="rust-symbol">
+                R
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-logo">
+            RUST<span>+</span>
+        </div>
+
+        <p>
+            RUST COMPANION • 2026
+        </p>
+
+    </footer>
+
+
+    <div class="toast" id="toast">
+        Добро пожаловать в RUST+!
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
